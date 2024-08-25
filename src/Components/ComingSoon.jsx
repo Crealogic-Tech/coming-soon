@@ -1,55 +1,18 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import CountdownTimer from './CountdownTimer';
+import Introduction from './Introduction';
+import SocialSection from './SocialSection';
 
-const BasicParticles = () => {
-    const particlesInit = useCallback(async (engine) => {
-        await loadFull(engine);
-    }, []);
+const ComingSoon = () => (
+    <section className="min-h-screen bg-[#000] flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
+        <div className='container max-w-[1140px] relative z-10'>
+            <div className="text-white">
+                <Introduction />
+                <CountdownTimer />
+                <SocialSection />
+            </div>
+        </div>
+    </section>
+);
 
-    return (
-        <Particles
-            id="tsparticles"
-            init={particlesInit}
-            options={{
-                particles: {
-                    color: {
-                        value: "#ffffff",
-                    },
-                    links: {
-                        color: "#ffffff",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        speed: 1,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 800,
-                        },
-                        value: 50,
-                    },
-                },
-                detectRetina: true,
-            }}
-            style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-            }}
-        />
-    );
-};
-
-export default BasicParticles;
+export default ComingSoon;
