@@ -24,7 +24,7 @@ const SocialSection = () => (
           <FaLinkedin size={24} />
         </a>
       </li>
-      <li>
+      {/* <li>
         <a
           href="https://x.com/Crealogictech"
           target="_blank"
@@ -33,7 +33,7 @@ const SocialSection = () => (
         >
           <FaSquareXTwitter size={24} />
         </a>
-      </li>
+      </li> */}
 
       <li>
         <a
